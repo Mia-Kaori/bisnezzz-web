@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE PANTS #001 · Bisnezzz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <p>THE PANTS #001 · Preventa desde 06/11 · Unidades limitadas</p>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Bisnezzz, ir al inicio"></a>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <a class="volver" href="catalogo.html">← Volver al catálogo</a>
+
+        <div class="detalle">
+            <img class="detalle-imagen" src="img/the-pants-001-delante.png"
+                alt="Pantalón baggy rojo THE PANTS #001 con el gráfico REDRED en blanco, junto a una camiseta blanca">
+
+            <div class="detalle-info">
+                <p class="categoria">Special Drops</p>
+                <h1>THE PANTS #001</h1>
+
+                <ul class="etiquetas">
+                    <li>Edición limitada</li>
+                    <li>Baggy pants</li>
+                    <li>Regalo: póster y pegatinas</li>
+                </ul>
+
+                <p class="precio">64,90 € <s>69,90 €</s></p>
+                <p class="precio-nota">Precio rebajado: antes 69,90 €, ahora 64,90 €. IVA incluido.</p>
+
+                <p class="descripcion">Pantalón baggy rojo con el gráfico REDRED en blanco. Es el primer pantalón de Bisnezzz: un corte amplio y cómodo, pensado para combinar con camisetas oversize. Se fabrica en una edición limitada que solo puede reservarse durante la preventa.</p>
+
+                <h2>Características</h2>
+                <ul class="caracteristicas">
+                    <li>Corte baggy</li>
+                    <li>Edición limitada</li>
+                    <li>Tallas disponibles: S, M y L</li>
+                    <li>Preventa: envío estimado del 22 de diciembre al 9 de enero</li>
+                    <li>Incluye póster y pegatinas de regalo</li>
+                </ul>
+
+                <fieldset class="selector-talla">
+                    <legend>Talla (obligatoria)</legend>
+                    <label class="ticket"><input type="radio" name="talla" value="S"> S</label>
+                    <label class="ticket"><input type="radio" name="talla" value="M"> M</label>
+                    <label class="ticket"><input type="radio" name="talla" value="L"> L</label>
+                </fieldset>
+                <a href="#medidas">Guía de tallas: ver medidas</a>
+
+                <label class="condicion">
+                    <input type="checkbox" name="condicion-preventa">
+                    Entiendo que es un producto de preventa y que el envío estimado es del 22 de diciembre al 9 de enero. (obligatorio)
+                </label>
+
+                <button class="boton" type="button">Añadir al carrito</button>
+                <p class="aviso-prototipo">Prototipo: este botón todavía no añade la prenda al carrito. Puedes ver un carrito de ejemplo desde «Carrito» en el menú.</p>
+            </div>
+        </div>
+
+        <section class="informacion" aria-labelledby="titulo-informacion">
+            <h2 id="titulo-informacion">Información de la prenda</h2>
+
+            <details id="medidas">
+                <summary>Medidas</summary>
+                <table>
+                    <caption>Medidas de la prenda en centímetros</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Talla</th>
+                            <th scope="col">Cintura</th>
+                            <th scope="col">Cadera</th>
+                            <th scope="col">Largo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">S</th><td>[cm]</td><td>[cm]</td><td>[cm]</td></tr>
+                        <tr><th scope="row">M</th><td>[cm]</td><td>[cm]</td><td>[cm]</td></tr>
+                        <tr><th scope="row">L</th><td>[cm]</td><td>[cm]</td><td>[cm]</td></tr>
+                    </tbody>
+                </table>
+            </details>
+
+            <details>
+                <summary>Composición y cuidados</summary>
+                <p>[Composición del tejido e instrucciones de lavado]</p>
+            </details>
+
+            <details>
+                <summary>Envíos</summary>
+                <p>[Tipos de envío, plazos y precios]</p>
+            </details>
+
+            <details>
+                <summary>Devoluciones y reembolsos</summary>
+                <p>[Condiciones y plazos de devolución]</p>
+                <a href="formulario.html">¿No te queda bien? Solicita un cambio de talla</a>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <div class="frase">
+            <h2>From fan to fan</h2>
+            <p>Hecho por fans y para fans. Diseñado en España.</p>
+        </div>
+
+        <nav aria-label="Ayuda">
+            <h2>Ayuda</h2>
+            <a href="formulario.html">Cambio de talla</a>
+        </nav>
+
+        <div class="redes-sociales">
+            <h2>Síguenos</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/bisne.zzz/">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@bisne.zzz">TikTok</a></li>
+            </ul>
+        </div>
+
+        <div class="aviso">
+            <p>© 2026 Bisnezzz · Prototipo académico: no se realizan compras ni envíos reales</p>
+        </div>
+    </footer>
+</body>
+
+</html>

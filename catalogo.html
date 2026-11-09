@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo · Bisnezzz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <p>THE PANTS #001 · Preventa desde 06/11 · Unidades limitadas</p>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Bisnezzz, ir al inicio"></a>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Catálogo</h1>
+        <p>Toda la ropa Bisnezzz: camisetas, pantalones y special drops.</p>
+
+        <p class="aviso-prototipo">Prototipo: la búsqueda, los filtros y la paginación todavía no modifican los resultados.</p>
+
+        <div class="buscador" role="search">
+            <label for="busqueda">Buscar en el catálogo</label>
+            <input type="search" id="busqueda" name="busqueda" placeholder="Ej.: Arirang">
+            <button class="boton" type="button">Buscar</button>
+        </div>
+
+        <div class="catalogo-contenido">
+            <aside class="filtros" aria-labelledby="titulo-filtros">
+                <h2 id="titulo-filtros">Filtros</h2>
+
+                <label for="categoria">Categoría</label>
+                <select id="categoria" name="categoria">
+                    <option value="todas">Todas</option>
+                    <option value="camisetas">Camisetas</option>
+                    <option value="pantalones">Pantalones</option>
+                    <option value="special-drops">Special Drops</option>
+                </select>
+
+                <fieldset>
+                    <legend>Disponibilidad</legend>
+                    <label><input type="checkbox" name="disponibilidad" value="disponible"> Disponible</label>
+                    <label><input type="checkbox" name="disponibilidad" value="preventa"> Preventa</label>
+                </fieldset>
+
+                <button class="boton" type="button">Aplicar filtros</button>
+            </aside>
+
+            <section class="resultados" aria-labelledby="titulo-resultados">
+                <h2 id="titulo-resultados">Resultados</h2>
+                <p class="resumen-resultados">Mostrando 1–7 de 18 resultados</p>
+
+                <ul class="catalogo-grid">
+                    <li>
+                        <article class="ficha ficha-destacada">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/the-pants-001-delante.png"
+                                    alt="Pantalón baggy rojo THE PANTS #001, vista delantera">
+                                <img class="foto-detras" src="img/the-pants-001-delante.png" alt="">
+                            </div>
+                            <h3>THE PANTS #001</h3>
+                            <p>Pantalón baggy rojo de edición limitada con el gráfico REDRED. El drop actual de Bisnezzz.</p>
+                            <p class="ficha-info">64,90 € · Preventa</p>
+                            <a class="boton" href="detalle.html">Ver detalle de THE PANTS #001</a>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/aliens-delante.png"
+                                    alt="Camiseta con frases de la canción Aliens de BTS, vista delantera">
+                                <img class="foto-detras" src="img/aliens-detras.png"
+                                    alt="Camiseta con frases de la canción Aliens de BTS, vista trasera">
+                            </div>
+                            <h3>Aliens</h3>
+                            <p>Camiseta con frases de la canción Aliens de BTS.</p>
+                            <p class="ficha-info">35,00 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/bulletproof-gris-delante.png"
+                                    alt="Camiseta gris con la silueta de los 7 integrantes de BTS, vista delantera">
+                                <img class="foto-detras" src="img/bulletproof-gris-detras.png"
+                                    alt="Camiseta gris con las fechas del tour Arirang, vista trasera">
+                            </div>
+                            <h3>Bulletproof Gris</h3>
+                            <p>Camiseta gris con la silueta de los 7 integrantes y las fechas del tour Arirang en la espalda.</p>
+                            <p class="ficha-info">35,00 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/arirang-delante.png"
+                                    alt="Camiseta blanca con diseño Arirang, vista delantera">
+                                <img class="foto-detras" src="img/arirang-detras.png"
+                                    alt="Camiseta blanca con diseño Arirang y fechas del tour, vista trasera">
+                            </div>
+                            <h3>Arirang</h3>
+                            <p>Camiseta blanca con diseño Arirang y las fechas del tour en la espalda.</p>
+                            <p class="ficha-info">35,00 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/bulletproof-og-debut.png"
+                                    alt="Camiseta de baloncesto negra Bulletproof OG Debut con las letras BTS">
+                            </div>
+                            <h3>Bulletproof OG Debut</h3>
+                            <p>Camiseta de baloncesto personalizable con el miembro que elijas.</p>
+                            <p class="ficha-info">25,00 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/into-the-sun.png" alt="[Describe la prenda]">
+                            </div>
+                            <h3>Into the Sun Summer ed.</h3>
+                            <p>[Descripción breve]</p>
+                            <p class="ficha-info">34,90 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/hooligan.png" alt="[Describe la prenda]">
+                            </div>
+                            <h3>Hooligan Summer ed.</h3>
+                            <p>[Descripción breve]</p>
+                            <p class="ficha-info">34,90 € · Disponible</p>
+                        </article>
+                    </li>
+                </ul>
+
+                <nav class="paginacion" aria-label="Paginación">
+                    <ul>
+                        <li><button type="button">Anterior</button></li>
+                        <li><button type="button" aria-current="page">1</button></li>
+                        <li><button type="button">2</button></li>
+                        <li><button type="button">3</button></li>
+                        <li><button type="button">Siguiente</button></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="frase">
+            <h2>From fan to fan</h2>
+            <p>Hecho por fans y para fans. Diseñado en España.</p>
+        </div>
+
+        <nav aria-label="Ayuda">
+            <h2>Ayuda</h2>
+            <a href="formulario.html">Cambio de talla</a>
+        </nav>
+
+        <div class="redes-sociales">
+            <h2>Síguenos</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/bisne.zzz/">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@bisne.zzz">TikTok</a></li>
+            </ul>
+        </div>
+
+        <div class="aviso">
+            <p>© 2026 Bisnezzz · Prototipo académico: no se realizan compras ni envíos reales</p>
+        </div>
+    </footer>
+</body>
+
+</html>
