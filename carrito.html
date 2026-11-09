@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito · Bisnezzz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <p>THE PANTS #001 · Preventa desde 06/11 · Unidades limitadas</p>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Bisnezzz, ir al inicio"></a>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html" aria-current="page">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Carrito</h1>
+        <p class="frase-marca">Tu outfit se está cocinando</p>
+
+        <p class="aviso-prototipo">Prototipo: carrito de ejemplo. Los botones de cantidad y eliminar todavía no modifican la selección ni recalculan el total.</p>
+
+        <div class="carrito">
+            <section class="carrito-productos" aria-labelledby="titulo-seleccion">
+                <h2 id="titulo-seleccion">Tu selección (2 prendas)</h2>
+
+                <ul class="carrito-lista">
+                    <li class="carrito-fila">
+                        <img src="img/the-pants-001-delante.png" alt="">
+                        <div class="carrito-prenda">
+                            <h3>THE PANTS #001</h3>
+                            <p>Talla: M · Preventa</p>
+                            <button class="boton-texto" type="button">Eliminar THE PANTS #001</button>
+                        </div>
+                        <p class="carrito-precio"><span>Precio unidad:</span> 64,90 €</p>
+                        <div class="carrito-cantidad">
+                            <label for="cantidad-1">Cantidad</label>
+                            <button type="button" aria-label="Quitar una unidad de THE PANTS #001">−</button>
+                            <input type="number" id="cantidad-1" name="cantidad-1" value="1" min="1" max="5">
+                            <button type="button" aria-label="Añadir una unidad de THE PANTS #001">+</button>
+                        </div>
+                        <p class="carrito-subtotal"><span>Subtotal:</span> 64,90 €</p>
+                    </li>
+
+                    <li class="carrito-fila">
+                        <img src="img/aliens-delante.png" alt="">
+                        <div class="carrito-prenda">
+                            <h3>Aliens</h3>
+                            <p>Talla: M</p>
+                            <button class="boton-texto" type="button">Eliminar Aliens</button>
+                        </div>
+                        <p class="carrito-precio"><span>Precio unidad:</span> 35,00 €</p>
+                        <div class="carrito-cantidad">
+                            <label for="cantidad-2">Cantidad</label>
+                            <button type="button" aria-label="Quitar una unidad de Aliens">−</button>
+                            <input type="number" id="cantidad-2" name="cantidad-2" value="2" min="1" max="5">
+                            <button type="button" aria-label="Añadir una unidad de Aliens">+</button>
+                        </div>
+                        <p class="carrito-subtotal"><span>Subtotal:</span> 70,00 €</p>
+                    </li>
+                </ul>
+
+                <a class="volver" href="catalogo.html">← Seguir comprando</a>
+            </section>
+
+            <aside class="resumen" aria-labelledby="titulo-resumen">
+                <h2 id="titulo-resumen">Resumen del pedido</h2>
+                <p>Subtotal (3 unidades): 134,90 €</p>
+                <p>Envío: se calcula en el siguiente paso</p>
+                <p class="total">Total: 134,90 €</p>
+                <p>IVA incluido.</p>
+                <button class="boton" type="button">Tramitar pedido</button>
+                <p class="aviso-prototipo">Prototipo: no se realizará ningún pedido ni pago.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="frase">
+            <h2>From fan to fan</h2>
+            <p>Hecho por fans y para fans. Diseñado en España.</p>
+        </div>
+
+        <nav aria-label="Ayuda">
+            <h2>Ayuda</h2>
+            <a href="formulario.html">Cambio de talla</a>
+        </nav>
+
+        <div class="redes-sociales">
+            <h2>Síguenos</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/bisne.zzz/">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@bisne.zzz">TikTok</a></li>
+            </ul>
+        </div>
+
+        <div class="aviso">
+            <p>© 2026 Bisnezzz · Prototipo académico: no se realizan compras ni envíos reales</p>
+        </div>
+    </footer>
+</body>
+
+</html>
