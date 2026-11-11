@@ -23,13 +23,13 @@
 
     <main>
         <h1>Catálogo</h1>
-        <p>Toda la ropa Bisnezzz: camisetas, pantalones y special drops.</p>
+        <p>Ropa para fans de la música: camisetas y sudaderas de tus artistas favoritos y prendas de diseño propio.</p>
 
         <p class="aviso-prototipo">Prototipo: la búsqueda, los filtros y la paginación todavía no modifican los resultados.</p>
 
         <div class="buscador" role="search">
             <label for="busqueda">Buscar en el catálogo</label>
-            <input type="search" id="busqueda" name="busqueda" placeholder="Ej.: Arirang">
+            <input type="search" id="busqueda" name="busqueda" placeholder="Ej.: The Weeknd">
             <button class="boton" type="button">Buscar</button>
         </div>
 
@@ -41,14 +41,17 @@
                 <select id="categoria" name="categoria">
                     <option value="todas">Todas</option>
                     <option value="camisetas">Camisetas</option>
+                    <option value="sudaderas">Sudaderas</option>
                     <option value="pantalones">Pantalones</option>
                     <option value="special-drops">Special Drops</option>
                 </select>
 
                 <fieldset>
-                    <legend>Disponibilidad</legend>
-                    <label><input type="checkbox" name="disponibilidad" value="disponible"> Disponible</label>
-                    <label><input type="checkbox" name="disponibilidad" value="preventa"> Preventa</label>
+                    <legend>Artista</legend>
+                    <label><input type="checkbox" name="artista" value="bts"> BTS</label>
+                    <label><input type="checkbox" name="artista" value="the-weeknd"> The Weeknd</label>
+                    <label><input type="checkbox" name="artista" value="oceanfromtheblue"> oceanfromtheblue</label>
+                    <label><input type="checkbox" name="artista" value="bisnezzz"> Diseño propio Bisnezzz</label>
                 </fieldset>
 
                 <button class="boton" type="button">Aplicar filtros</button>
@@ -56,18 +59,19 @@
 
             <section class="resultados" aria-labelledby="titulo-resultados">
                 <h2 id="titulo-resultados">Resultados</h2>
-                <p class="resumen-resultados">Mostrando 1–7 de 18 resultados</p>
+                <p class="resumen-resultados">Mostrando 1–9 de 18 resultados</p>
 
-                <ul class="catalogo-grid">
+                <ul class="catalogo-grid armario">
                     <li>
                         <article class="ficha ficha-destacada">
                             <div class="prenda-fotos">
-                                <img class="foto-delante" src="img/thepants.png"
-                                    alt="Pantalón baggy granate THE PANTS #001, vista delantera">
-                                <img class="foto-detras" src="img/thepants.png" alt="Pantalón baggy granate THE PANTS #001, vista trasera">
+                                <img class="foto-delante" src="img/the-pants-delante.png"
+                                    alt="Pantalón baggy granate THE PANTS #001 con letras bordadas en relieve en el lateral, vista delantera">
+                                <img class="foto-detras" src="img/the-pants-detras.png"
+                                    alt="Pantalón baggy granate THE PANTS #001 con el gráfico REDRED en blanco, vista trasera">
                             </div>
                             <h3>THE PANTS #001</h3>
-                            <p>Pantalón baggy granate de corte wide leg, con detalles en appliqué y bajos ajustables. El drop actual de Bisnezzz.</p>
+                            <p>Pantalón baggy granate de corte wide leg, con bajos ajustables y el gráfico REDRED en la espalda. El drop actual de Bisnezzz.</p>
                             <p class="ficha-info">64,90 € · Preventa</p>
                             <a class="boton" href="detalle.html">Ver detalle de THE PANTS #001</a>
                         </article>
@@ -76,13 +80,55 @@
                     <li>
                         <article class="ficha">
                             <div class="prenda-fotos">
-                                <img class="foto-delante" src="img/aliens-delante.png"
-                                    alt="Camiseta con frases de la canción Aliens de BTS, vista delantera">
-                                <img class="foto-detras" src="img/aliens-detras.png"
-                                    alt="Camiseta con frases de la canción Aliens de BTS, vista trasera">
+                                <img class="foto-delante" src="img/the-weeknd-delante.png"
+                                    alt="Camiseta negra con el texto «XO tatted all over her body» y una figura cromada dentro de una copa de cóctel, vista delantera">
+                                <img class="foto-detras" src="img/the-weeknd-detras.png"
+                                    alt="Camiseta negra con las fechas de la gira After Hours Til Dawn Europe 2026 de The Weeknd, vista trasera">
                             </div>
-                            <h3>Aliens</h3>
-                            <p>Camiseta con frases de la canción Aliens de BTS.</p>
+                            <h3>After Hours Tee</h3>
+                            <p>Camiseta negra para fans de The Weeknd, con una ilustración cromada delante y las fechas de la gira europea en la espalda.</p>
+                            <p class="ficha-info">35,00 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/ocean-from-the-blue-delante.png"
+                                    alt="Camiseta negra con el texto «You're necessary» y un anillo azul con la inscripción Necessary Girl, vista delantera">
+                                <img class="foto-detras" src="img/ocean-from-the-blue-detras.png"
+                                    alt="Camiseta negra con las fechas de la gira Back to Blue Europe Tour 27 de oceanfromtheblue en azul, vista trasera">
+                            </div>
+                            <h3>Necessary Girl Tee</h3>
+                            <p>Camiseta negra inspirada en «Necessary Girl» de oceanfromtheblue, con las fechas de la gira Back to Blue en la espalda.</p>
+                            <p class="ficha-info">35,00 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/sudadera-delante.png"
+                                    alt="Sudadera negra con capucha y el logo «This &amp; That» pequeño en naranja, vista delantera">
+                                <img class="foto-detras" src="img/sudadera-detras.png"
+                                    alt="Sudadera negra con un collage «This &amp; That» de fotos, discos, auriculares y una taza, vista trasera">
+                            </div>
+                            <h3>Sudadera This &amp; That</h3>
+                            <p>Sudadera negra con capucha, el logo «This &amp; That» en el pecho y un gran collage musical en la espalda.</p>
+                            <p class="ficha-info">54,90 € · Disponible</p>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article class="ficha">
+                            <div class="prenda-fotos">
+                                <img class="foto-delante" src="img/arirang-black-delante.png"
+                                    alt="Camiseta negra con una foto de los integrantes de BTS delante de un autobús y la palabra Bulletproof en rosa, vista delantera">
+                                <img class="foto-detras" src="img/arirang-black-detras.png"
+                                    alt="Camiseta negra con el texto Arirang Tour Europe y las fechas de la gira en rosa, vista trasera">
+                            </div>
+                            <h3>Bulletproof Negra</h3>
+                            <p>Camiseta negra con una foto de BTS y la palabra Bulletproof delante, y las fechas del Arirang Tour en la espalda.</p>
                             <p class="ficha-info">35,00 € · Disponible</p>
                         </article>
                     </li>
@@ -91,12 +137,12 @@
                         <article class="ficha">
                             <div class="prenda-fotos">
                                 <img class="foto-delante" src="img/bulletproof-gris-delante.png"
-                                    alt="Camiseta gris con la silueta de los 7 integrantes de BTS, vista delantera">
+                                    alt="Camiseta gris claro con la silueta difuminada de los 7 integrantes de BTS y la palabra Bulletproof en rosa, vista delantera">
                                 <img class="foto-detras" src="img/bulletproof-gris-detras.png"
-                                    alt="Camiseta gris con las fechas del tour Arirang, vista trasera">
+                                    alt="Camiseta gris claro con el texto Arirang Tour Europe y las fechas de la gira en rosa, vista trasera">
                             </div>
                             <h3>Bulletproof Gris</h3>
-                            <p>Camiseta gris con la silueta de los 7 integrantes y las fechas del tour Arirang en la espalda.</p>
+                            <p>Camiseta gris con la silueta de los 7 integrantes y las fechas del Arirang Tour en la espalda.</p>
                             <p class="ficha-info">35,00 € · Disponible</p>
                         </article>
                     </li>
@@ -105,12 +151,12 @@
                         <article class="ficha">
                             <div class="prenda-fotos">
                                 <img class="foto-delante" src="img/arirang-delante.png"
-                                    alt="Camiseta blanca con diseño Arirang, vista delantera">
+                                    alt="Camiseta blanca con la palabra Arirang en negro y etiquetas rojas, vista delantera">
                                 <img class="foto-detras" src="img/arirang-detras.png"
-                                    alt="Camiseta blanca con diseño Arirang y fechas del tour, vista trasera">
+                                    alt="Camiseta blanca con el texto Arirang Tour en rojo, una ilustración de los integrantes en una mesa y las fechas de la gira, vista trasera">
                             </div>
                             <h3>Arirang</h3>
-                            <p>Camiseta blanca con diseño Arirang y las fechas del tour en la espalda.</p>
+                            <p>Camiseta blanca con diseño Arirang delante y las fechas del tour en la espalda.</p>
                             <p class="ficha-info">35,00 € · Disponible</p>
                         </article>
                     </li>
@@ -118,24 +164,14 @@
                     <li>
                         <article class="ficha">
                             <div class="prenda-fotos">
-                                <img class="foto-delante" src="img/swim-delante.png"
-                                    alt="Camiseta de Swim Summer edition">
+                                <img class="foto-delante" src="img/aliens-delante.png"
+                                    alt="Camiseta blanca lavada con frases de la canción Aliens de BTS en letra pequeña, vista delantera">
+                                <img class="foto-detras" src="img/aliens-detras.png"
+                                    alt="Camiseta blanca lavada con el texto «Everybody know now where the K is» y un sello rojo en coreano, vista trasera">
                             </div>
-                            <h3>Swim Summer ed.</h3>
-                            <p>Camiseta de corte relajado inspirada en la canción «Swim» del álbum Arirang.</p>
-                            <p class="ficha-info">25,00 € · Disponible</p>
-                        </article>
-                    </li>
-
-                    <li>
-                        <article class="ficha">
-                            <div class="prenda-fotos">
-                                <img class="foto-delante" src="img/into-the-sun.png"
-                                    alt="Camiseta Into the Sun Summer edition">
-                            </div>
-                            <h3>Into the Sun Summer ed.</h3>
-                            <p>Camiseta de corte relajado inspirada en la canción «Into the Sun» del álbum Arirang.</p>
-                            <p class="ficha-info">34,90 € · Disponible</p>
+                            <h3>Aliens</h3>
+                            <p>Camiseta blanca lavada con frases de la canción Aliens de BTS delante y un gran mensaje en la espalda.</p>
+                            <p class="ficha-info">35,00 € · Disponible</p>
                         </article>
                     </li>
 
@@ -143,10 +179,12 @@
                         <article class="ficha">
                             <div class="prenda-fotos">
                                 <img class="foto-delante" src="img/hooligan-delante.png"
-                                    alt="Camiseta Hooligan Summer edition">
+                                    alt="Camiseta negra lavada con tres caras con pasamontañas y la frase «Watch this, watch this beat goin'», vista delantera">
+                                <img class="foto-detras" src="img/hooligan-detras.png"
+                                    alt="Camiseta negra lavada, lisa, con ojales metálicos, vista trasera">
                             </div>
-                            <h3>Hooligan Summer ed.</h3>
-                            <p>Camiseta de corte relajado inspirada en la canción «Hooligan» del álbum Arirang.</p>
+                            <h3>Hooligan</h3>
+                            <p>Camiseta negra lavada inspirada en la canción «Hooligan» de BTS, con la letra delante y detalles de ojales metálicos.</p>
                             <p class="ficha-info">34,90 € · Disponible</p>
                         </article>
                     </li>
