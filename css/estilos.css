@@ -1,11 +1,12 @@
+/* ===== 1. FUENTES Y VARIABLES ===== */
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap");
 
 :root {
-    --color-fondo: #F0E5DB;
+    --color-fondo: #F5F5F5;
     --color-texto: #474329;
     --color-acento: #FC75B4;
     --color-enlace: #A8285F;
-    --color-superficie: #F8F2EC;
+    --color-superficie: #FFFFFF;
 
     --fuente-titulos: "Anton", "Impact", "Arial Narrow", sans-serif;
     --fuente-texto: "Inter", "Helvetica Neue", Arial, sans-serif;
@@ -20,6 +21,8 @@
     --borde: 2px solid var(--color-texto);
 }
 
+
+/* ===== 2. RESET Y BASE ===== */
 *,
 *::before,
 *::after {
@@ -43,20 +46,20 @@ img {
 
 h1,
 h2 {
+    margin: 0 0 var(--espacio-m);
     font-family: var(--fuente-titulos);
     font-weight: 400;
-    text-transform: uppercase;
     line-height: 1.05;
-    letter-spacing: 0.01em;
-    margin: 0 0 var(--espacio-m);
+    text-transform: uppercase;
+    letter-spacing: 0;
 }
 
 h1 { font-size: 3.5rem; }
 h2 { font-size: 2rem; }
 
 h3 {
-    font-size: 1.125rem;
     margin: 0 0 var(--espacio-s);
+    font-size: 1.125rem;
 }
 
 p {
@@ -74,13 +77,14 @@ nav ul,
 .rail,
 .ventajas-lista,
 .catalogo-grid,
-.etiquetas,
 .carrito-lista {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+
+/* ===== 3. COMPONENTES COMPARTIDOS ===== */
 a {
     color: var(--color-enlace);
     text-underline-offset: 0.2em;
@@ -104,8 +108,8 @@ a:hover {
     background-color: var(--color-texto);
     color: var(--color-fondo);
     font: 600 1rem/1.2 var(--fuente-texto);
-    text-decoration: none;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -150,6 +154,8 @@ a:hover {
     font-size: 0.875rem;
 }
 
+
+/* ===== 4. CABECERA Y NAVEGACIÓN (FLEXBOX) ===== */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -169,7 +175,6 @@ header > p {
     font-size: 0.875rem;
     font-weight: 600;
     text-align: center;
-    letter-spacing: 0.05em;
 }
 
 .logo {
@@ -190,7 +195,7 @@ header nav a {
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 header nav a:hover {
@@ -202,6 +207,8 @@ nav a[aria-current="page"] {
     font-weight: 700;
 }
 
+
+/* ===== 5. PIE DE PÁGINA (FLEXBOX) ===== */
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -253,6 +260,8 @@ footer .aviso p {
     margin: 0;
 }
 
+
+/* ===== 6. INICIO ===== */
 .presentacion {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -299,12 +308,11 @@ footer .aviso p {
     display: flex;
     gap: var(--hueco-grid);
     overflow-x: auto;
-    padding: 0 0 var(--espacio-m);
-    border-top: 6px solid var(--color-acento);
+    padding-bottom: var(--espacio-m);
 }
 
 .rail .prenda {
-    flex: 0 0 15rem;
+    flex: 1 0 13rem;
 }
 
 .prenda-info {
@@ -324,14 +332,24 @@ footer .aviso p {
     background-color: var(--color-superficie);
 }
 
-.prenda,
-.ficha {
+
+/* ===== 7. EFECTO ARMARIO: BARRA Y GANCHO ===== */
+.armario > li {
     position: relative;
     padding-top: 2rem;
 }
 
-.prenda::before,
-.ficha::before {
+.armario > li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(var(--hueco-grid) / -2);
+    right: calc(var(--hueco-grid) / -2);
+    height: 6px;
+    background-color: var(--color-acento);
+}
+
+.armario > li::after {
     content: "";
     position: absolute;
     top: 0;
@@ -341,10 +359,13 @@ footer .aviso p {
     background-color: var(--color-texto);
 }
 
+
+/* ===== 8. PRENDAS: DELANTE/DETRÁS Y ZOOM ===== */
 .prenda-fotos {
     position: relative;
     aspect-ratio: 1 / 1;
     margin-bottom: var(--espacio-m);
+    transition: transform 0.3s ease;
 }
 
 .prenda-fotos img {
@@ -374,12 +395,15 @@ footer .aviso p {
     opacity: 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .prenda-fotos img {
-        transition: none;
-    }
+.prenda:hover .prenda-fotos,
+.prenda:focus-within .prenda-fotos,
+.ficha:hover .prenda-fotos,
+.ficha:focus-within .prenda-fotos {
+    transform: scale(1.08);
 }
 
+
+/* ===== 9. CATÁLOGO ===== */
 .buscador {
     display: flex;
     flex-wrap: wrap;
@@ -420,6 +444,11 @@ footer .aviso p {
     margin-bottom: var(--espacio-m);
 }
 
+.filtros fieldset {
+    min-width: 0;
+    padding: var(--espacio-s) var(--espacio-m) var(--espacio-m);
+}
+
 .resumen-resultados {
     font-size: 0.875rem;
 }
@@ -431,22 +460,9 @@ footer .aviso p {
     margin-bottom: var(--espacio-xl);
 }
 
-.catalogo-grid > li {
-    position: relative;
-}
-
-.catalogo-grid > li::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: calc(var(--hueco-grid) / -2);
-    right: calc(var(--hueco-grid) / -2);
-    height: 6px;
-    background-color: var(--color-acento);
-}
-
 .catalogo-grid > li:first-child {
     grid-column: span 2;
+    grid-row: span 2;
 }
 
 .ficha {
@@ -455,33 +471,58 @@ footer .aviso p {
     height: 100%;
 }
 
-.ficha .boton {
-    margin-top: auto;
-    align-self: flex-start;
-}
-
 .ficha-info {
     font-weight: 700;
 }
 
 .ficha-destacada {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: auto auto auto 1fr;
-    column-gap: var(--hueco-grid);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    grid-template-rows: 1fr auto auto auto;
+    column-gap: var(--espacio-l);
+}
+
+.ficha-destacada .ampliar {
+    grid-column: 1 / -1;
+    min-height: 0;
+    margin-bottom: var(--espacio-m);
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
 .ficha-destacada .prenda-fotos {
-    grid-row: 1 / span 4;
-    align-self: start;
+    height: 100%;
+    min-height: 22rem;
+    aspect-ratio: auto;
+}
+
+.ficha-destacada .prenda-fotos img {
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.ficha-destacada .foto-detras {
+    background-color: var(--color-superficie);
+    object-fit: contain;
 }
 
 .ficha-destacada h3 {
     font-family: var(--fuente-titulos);
-    font-weight: 400;
     font-size: 2.5rem;
+    font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.ficha-destacada > :not(.ampliar):not(.boton) {
+    grid-column: 1;
+}
+
+.ficha-destacada .boton {
+    grid-column: 2;
+    grid-row: 2 / span 3;
+    align-self: center;
 }
 
 .paginacion ul {
@@ -508,6 +549,71 @@ footer .aviso p {
     color: var(--color-fondo);
 }
 
+
+/* ===== 10. FOTO AMPLIADA (:target) ===== */
+.ampliar {
+    display: block;
+    cursor: zoom-in;
+}
+
+.ampliada {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    padding: var(--espacio-l);
+    background-color: rgb(71 67 41 / 0.97);
+}
+
+.ampliada:target {
+    display: grid;
+    place-items: center;
+}
+
+.ampliada-fotos {
+    position: relative;
+    width: min(80vh, 90vw);
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--color-superficie);
+}
+
+.ampliada-fotos img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.ampliada-fotos:hover .foto-detras {
+    opacity: 1;
+}
+
+.ampliada-fotos:hover .foto-delante:not(:only-child) {
+    opacity: 0;
+}
+
+.cerrar {
+    position: absolute;
+    top: var(--espacio-l);
+    right: var(--espacio-l);
+    padding: var(--espacio-s) var(--espacio-m);
+    border-radius: 999px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ampliada :focus-visible {
+    outline-color: var(--color-acento);
+}
+
+
+/* ===== 11. DETALLE ===== */
 .detalle {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -516,8 +622,48 @@ footer .aviso p {
     margin-bottom: var(--espacio-xl);
 }
 
-.detalle-imagen {
+.detalle-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacio-m);
+}
+
+.detalle-galeria img {
+    width: 100%;
     border-radius: 1rem;
+    background-color: var(--color-superficie);
+}
+
+.detalle-galeria > :first-child {
+    grid-column: span 2;
+}
+
+.detalle-principal {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: var(--color-superficie);
+}
+
+.detalle-principal img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.detalle-principal:hover img {
+    transform: scale(1.3);
+}
+
+.detalle-principal:hover .foto-detras {
+    opacity: 1;
+}
+
+.detalle-principal:hover .foto-delante:not(:only-child) {
+    opacity: 0;
 }
 
 .categoria {
@@ -525,26 +671,11 @@ footer .aviso p {
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
 }
 
 .detalle-info h1 {
     font-size: 4rem;
-}
-
-.etiquetas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--espacio-s);
-    margin-bottom: var(--espacio-l);
-}
-
-.etiquetas li {
-    padding: 0.25rem 0.75rem;
-    border: var(--borde);
-    border-radius: 999px;
-    font-size: 0.875rem;
-    font-weight: 600;
 }
 
 .precio {
@@ -586,7 +717,6 @@ footer .aviso p {
 }
 
 .ticket {
-    position: relative;
     display: flex;
     align-items: center;
     gap: var(--espacio-s);
@@ -627,8 +757,8 @@ footer .aviso p {
 
 .informacion summary {
     padding: var(--espacio-m) 0;
-    font-weight: 700;
     font-size: 1.125rem;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -638,14 +768,14 @@ footer .aviso p {
 
 table {
     width: 100%;
-    max-width: 40rem;
+    max-width: 48rem;
     border-collapse: collapse;
 }
 
 caption {
     margin-bottom: var(--espacio-s);
-    text-align: left;
     font-weight: 600;
+    text-align: left;
 }
 
 th,
@@ -660,6 +790,8 @@ thead th {
     color: var(--color-fondo);
 }
 
+
+/* ===== 12. FORMULARIOS ===== */
 .formulario,
 .formulario-login {
     max-width: 40rem;
@@ -715,10 +847,10 @@ textarea {
 
 input[type="radio"],
 input[type="checkbox"] {
+    flex-shrink: 0;
     width: 1.25rem;
     height: 1.25rem;
     accent-color: var(--color-texto);
-    flex-shrink: 0;
 }
 
 .formulario fieldset fieldset label,
@@ -773,10 +905,13 @@ input[type="checkbox"] {
     width: 100%;
 }
 
+
+/* ===== 13. CARRITO ===== */
 .frase-marca {
     font-family: var(--fuente-titulos);
     font-size: 1.5rem;
     text-transform: uppercase;
+    letter-spacing: 0;
 }
 
 .carrito {
@@ -822,7 +957,7 @@ input[type="checkbox"] {
     display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 .carrito-subtotal {
@@ -841,7 +976,7 @@ input[type="checkbox"] {
     flex-basis: 100%;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0;
 }
 
 .carrito-cantidad button {
@@ -885,6 +1020,27 @@ input[type="checkbox"] {
     margin-bottom: var(--espacio-m);
 }
 
+
+/* ===== 14. MOVIMIENTO REDUCIDO ===== */
+@media (prefers-reduced-motion: reduce) {
+    .prenda-fotos,
+    .prenda-fotos img,
+    .detalle-principal img,
+    .ampliada-fotos img {
+        transition: none;
+    }
+
+    .prenda:hover .prenda-fotos,
+    .prenda:focus-within .prenda-fotos,
+    .ficha:hover .prenda-fotos,
+    .ficha:focus-within .prenda-fotos,
+    .detalle-principal:hover img {
+        transform: none;
+    }
+}
+
+
+/* ===== 15. ZOOM AL 200 % ===== */
 @media (max-width: 50rem) {
     main,
     header,
@@ -914,20 +1070,20 @@ input[type="checkbox"] {
     .catalogo-contenido,
     .detalle,
     .carrito,
+    .catalogo-grid,
     .ficha-destacada {
-        grid-template-columns: 1fr;
-    }
-
-    .catalogo-grid {
         grid-template-columns: 1fr;
     }
 
     .catalogo-grid > li:first-child {
         grid-column: auto;
+        grid-row: auto;
     }
 
-    .ficha-destacada .prenda-fotos {
+    .ficha-destacada .boton {
+        grid-column: 1;
         grid-row: auto;
+        justify-self: start;
     }
 
     .carrito-fila {

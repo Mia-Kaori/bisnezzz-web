@@ -1,3 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar cambio de talla · Bisnezzz</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+        <p>THE PANTS #001 · Preventa desde 06/11 · Unidades limitadas</p>
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Bisnezzz, ir al inicio"></a>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="login.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Solicitar cambio de talla</h1>
+        <p>¿Tu prenda no te queda como esperabas? Cuéntanos qué pedido es y qué talla necesitas, y te responderemos por correo.</p>
+
+        <p class="aviso-prototipo">Prototipo: la solicitud no se enviará ni se guardará. No introduzcas datos reales.</p>
+        <p>Los campos marcados como (obligatorio) son necesarios. Los demás son opcionales.</p>
+
+        <form class="formulario">
+            <fieldset>
+                <legend>Tus datos</legend>
+
+                <label for="nombre">Nombre <span class="obligatorio">(obligatorio)</span></label>
+                <input type="text" id="nombre" name="nombre" required autocomplete="name">
+
+                <label for="email">Correo electrónico <span class="obligatorio">(obligatorio)</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="ayuda-email">
+                <p class="instrucciones" id="ayuda-email">El mismo que usaste al hacer la compra.</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tu pedido</legend>
+
+                <label for="pedido">Número de pedido <span class="obligatorio">(obligatorio)</span></label>
+                <input type="text" id="pedido" name="pedido" required pattern="BZ-[0-9]{4}" placeholder="Ej.: BZ-1234" aria-describedby="ayuda-pedido">
+                <p class="instrucciones" id="ayuda-pedido">Formato: BZ- seguido de 4 números. Lo encontrarás en el correo de confirmación.</p>
+
+                <label for="fecha">Fecha en que lo recibiste <span class="obligatorio">(obligatorio)</span></label>
+                <input type="date" id="fecha" name="fecha" required min="2026-01-01" max="2026-12-31" aria-describedby="ayuda-fecha">
+                <p class="instrucciones" id="ayuda-fecha">Indica el día en que te llegó el paquete. Tienes 14 días naturales desde esa fecha para solicitar el cambio.</p>
+
+                <label for="prenda">Prenda que quieres cambiar <span class="obligatorio">(obligatorio)</span></label>
+                <select id="prenda" name="prenda" required>
+                    <option value="">Elige una prenda</option>
                     <option value="the-pants-001">THE PANTS #001</option>
                     <option value="after-hours-tee">After Hours Tee</option>
                     <option value="necessary-girl-tee">Necessary Girl Tee</option>
@@ -7,3 +63,66 @@
                     <option value="arirang">Arirang</option>
                     <option value="aliens">Aliens</option>
                     <option value="hooligan">Hooligan</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>El cambio</legend>
+
+                <fieldset>
+                    <legend>Motivo del cambio <span class="obligatorio">(obligatorio)</span></legend>
+                    <label><input type="radio" name="motivo" value="pequena" required> Me queda pequeña</label>
+                    <label><input type="radio" name="motivo" value="grande"> Me queda grande</label>
+                    <label><input type="radio" name="motivo" value="defecto"> La prenda tiene un defecto</label>
+                </fieldset>
+
+                <label for="talla">Talla que necesitas <span class="obligatorio">(obligatorio)</span></label>
+                <select id="talla" name="talla" required>
+                    <option value="">Elige una talla</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </select>
+
+                <label for="comentarios">Comentarios <span class="opcional">(opcional)</span></label>
+                <textarea id="comentarios" name="comentarios" rows="5" maxlength="500" aria-describedby="ayuda-comentarios"></textarea>
+                <p class="instrucciones" id="ayuda-comentarios">Por ejemplo, tus medidas o el defecto que has encontrado. Máximo 500 caracteres.</p>
+            </fieldset>
+
+            <label class="condicion">
+                <input type="checkbox" name="acepto-politica" required>
+                He leído y acepto la política de cambios y devoluciones. <span class="obligatorio">(obligatorio)</span>
+            </label>
+
+            <button class="boton" type="submit">Solicitar cambio de talla</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="frase">
+            <h2>From fan to fan</h2>
+            <p>Hecho por fans y para fans. Diseñado en España.</p>
+        </div>
+
+        <nav aria-label="Ayuda">
+            <h2>Ayuda</h2>
+            <a href="formulario.html" aria-current="page">Cambio de talla</a>
+        </nav>
+
+        <div class="redes-sociales">
+            <h2>Síguenos</h2>
+            <ul>
+                <li><a href="https://www.instagram.com/bisne.zzz/">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@bisne.zzz">TikTok</a></li>
+            </ul>
+        </div>
+
+        <div class="aviso">
+            <p>© 2026 Bisnezzz · Prototipo académico: no se realizan compras ni envíos reales</p>
+        </div>
+    </footer>
+</body>
+
+</html>
