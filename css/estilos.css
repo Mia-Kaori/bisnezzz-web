@@ -937,6 +937,7 @@ input[type="checkbox"] {
     border-bottom: var(--borde);
 }
 
+
 .carrito-fila img {
     aspect-ratio: 1 / 1;
     object-fit: contain;
@@ -1032,6 +1033,10 @@ input[type="checkbox"] {
     .ficha:focus-within .prenda-fotos,
     .detalle-principal:hover img {
         transform: none;
+    }
+
+    .rail {
+        flex-wrap: wrap;
     }
 }
 
