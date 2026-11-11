@@ -1035,9 +1035,7 @@ input[type="checkbox"] {
         transform: none;
     }
 
-    .rail {
-        flex-wrap: wrap;
-    }
+
 }
 
 
@@ -1090,5 +1088,9 @@ input[type="checkbox"] {
 
     .carrito-fila {
         grid-template-columns: 5rem 1fr;
+    }
+
+    .rail {
+        flex-wrap: wrap;
     }
 }
