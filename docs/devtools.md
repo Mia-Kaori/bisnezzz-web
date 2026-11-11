@@ -16,7 +16,7 @@ Herramienta: DevTools de Google Chrome (clic derecho → *Inspeccionar*). Las ca
 
 **Valor final (pestaña *Computed*):** `border-bottom-color: rgb(168, 40, 95)`.
 
-**Explicación:** gana la regla más específica. `border-bottom` es una propiedad abreviada que agrupa grosor, estilo y color. La regla más específica solo cambia el color, así que el grosor (3px) y el estilo (`solid`) siguen llegando de `nav a[aria-current="page"]`. En el mismo panel se ve otro ejemplo de cascada: `font-weight: 600` de `header nav a` aparece tachado porque lo sobrescribe `font-weight: 700`. `nav a[aria-current="page"]` vale para la cabecera y para el pie. En la cabecera, el rosa claro tenía un contraste de solo 2,31:1 con el fondo, así que se añadió `header nav a[aria-current="page"]`, más específica, para usar el rosa oscuro (6,15:1). En el pie, sobre fondo oscuro, se mantiene el rosa claro.
+**Explicación:** gana la regla más específica. `border-bottom` es una propiedad abreviada que agrupa grosor, estilo y color. La regla más específica solo cambia el color, así que el grosor (3px) y el estilo (`solid`) siguen llegando de `nav a[aria-current="page"]`. En el mismo panel se ve otro ejemplo de cascada: `font-weight: 600` de `header nav a` aparece tachado porque lo sobrescribe `font-weight: 700`. `nav a[aria-current="page"]` vale para la cabecera y para el pie. En la cabecera, el rosa claro tenía un contraste de solo 2,31:1 con el fondo, así que se añadió `header nav a[aria-current="page"]`, más específica, para usar el rosa oscuro (6,14:1). En el pie, sobre fondo oscuro, se mantiene el rosa claro.
 
 ![Panel Styles con las reglas del enlace actual del menú](capturas/cascada.png)
 
