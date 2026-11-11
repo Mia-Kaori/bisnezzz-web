@@ -36,6 +36,8 @@ body {
     font-family: var(--fuente-texto);
     font-size: 1rem;
     line-height: 1.6;
+    letter-spacing: 0;
+
 }
 
 img {
@@ -45,17 +47,26 @@ img {
 }
 
 h1,
-h2 {
+h2,
+.ficha-destacada h3 {
     margin: 0 0 var(--espacio-m);
     font-family: var(--fuente-titulos);
     font-weight: 400;
     line-height: 1.05;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
-h1 { font-size: 3.5rem; }
-h2 { font-size: 2rem; }
+.ficha-destacada h3 {
+    font-size: 2.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
 
 h3 {
     margin: 0 0 var(--espacio-s);
@@ -166,7 +177,7 @@ header {
     border-bottom: var(--borde);
 }
 
-header > p {
+header>p {
     flex-basis: calc(100% + var(--espacio-l) * 2);
     margin: 0 calc(var(--espacio-l) * -1);
     padding: var(--espacio-s) var(--espacio-l);
@@ -195,7 +206,6 @@ header nav a {
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
 header nav a:hover {
@@ -205,6 +215,10 @@ header nav a:hover {
 nav a[aria-current="page"] {
     border-bottom: 3px solid var(--color-acento);
     font-weight: 700;
+}
+
+header nav a[aria-current="page"] {
+    border-bottom-color: var(--color-enlace);
 }
 
 
@@ -232,7 +246,7 @@ footer .frase h2 {
     font-size: 3rem;
 }
 
-footer > nav,
+footer>nav,
 footer .redes-sociales {
     flex: 1 1 10rem;
 }
@@ -245,7 +259,7 @@ footer :focus-visible {
     outline-color: var(--color-acento);
 }
 
-footer .redes-sociales li + li {
+footer .redes-sociales li+li {
     margin-top: var(--espacio-s);
 }
 
@@ -334,12 +348,16 @@ footer .aviso p {
 
 
 /* ===== 7. EFECTO ARMARIO: BARRA Y GANCHO ===== */
-.armario > li {
+.armario {
+    padding-inline: calc(var(--hueco-grid) / 2);
+}
+
+.armario>li {
     position: relative;
     padding-top: 2rem;
 }
 
-.armario > li::before {
+.armario>li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -349,7 +367,7 @@ footer .aviso p {
     background-color: var(--color-acento);
 }
 
-.armario > li::after {
+.armario>li::after {
     content: "";
     position: absolute;
     top: 0;
@@ -460,7 +478,7 @@ footer .aviso p {
     margin-bottom: var(--espacio-xl);
 }
 
-.catalogo-grid > li:first-child {
+.catalogo-grid>li:first-child {
     grid-column: span 2;
     grid-row: span 2;
 }
@@ -512,10 +530,9 @@ footer .aviso p {
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
-.ficha-destacada > :not(.ampliar):not(.boton) {
+.ficha-destacada> :not(.ampliar):not(.boton) {
     grid-column: 1;
 }
 
@@ -549,6 +566,12 @@ footer .aviso p {
     color: var(--color-fondo);
 }
 
+.paginacion button[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.3em;
+}
+
 
 /* ===== 10. FOTO AMPLIADA (:target) ===== */
 .ampliar {
@@ -570,30 +593,25 @@ footer .aviso p {
     place-items: center;
 }
 
+body:has(.ampliada:target) header,
+body:has(.ampliada:target) footer,
+body:has(.ampliada:target) main> :not(.ampliada) {
+    visibility: hidden;
+}
+
 .ampliada-fotos {
-    position: relative;
-    width: min(80vh, 90vw);
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 1rem;
-    background-color: var(--color-superficie);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espacio-m);
+    width: min(90vw, 150vh);
 }
 
 .ampliada-fotos img {
-    position: absolute;
-    inset: 0;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
-    transition: opacity 0.3s ease;
-}
-
-.ampliada-fotos:hover .foto-detras {
-    opacity: 1;
-}
-
-.ampliada-fotos:hover .foto-delante:not(:only-child) {
-    opacity: 0;
+    border-radius: 1rem;
+    background-color: var(--color-superficie);
 }
 
 .cerrar {
@@ -624,7 +642,6 @@ footer .aviso p {
 
 .detalle-galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: var(--espacio-m);
 }
 
@@ -634,9 +651,7 @@ footer .aviso p {
     background-color: var(--color-superficie);
 }
 
-.detalle-galeria > :first-child {
-    grid-column: span 2;
-}
+
 
 .detalle-principal {
     position: relative;
@@ -658,20 +673,12 @@ footer .aviso p {
     transform: scale(1.3);
 }
 
-.detalle-principal:hover .foto-detras {
-    opacity: 1;
-}
-
-.detalle-principal:hover .foto-delante:not(:only-child) {
-    opacity: 0;
-}
 
 .categoria {
     margin-bottom: var(--espacio-s);
     font-size: 0.875rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
 .detalle-info h1 {
@@ -738,9 +745,6 @@ footer .aviso p {
     background-color: var(--color-fondo);
 }
 
-.detalle-info .condicion {
-    margin: var(--espacio-l) 0 var(--espacio-m);
-}
 
 .detalle-info .boton {
     width: 100%;
@@ -816,7 +820,7 @@ fieldset fieldset {
 
 .formulario label,
 .formulario-login label,
-.filtros > label {
+.filtros>label {
     display: block;
     margin-top: var(--espacio-m);
     margin-bottom: 0.25rem;
@@ -854,8 +858,7 @@ input[type="checkbox"] {
 }
 
 .formulario fieldset fieldset label,
-.filtros fieldset label,
-.condicion {
+.filtros fieldset label{
     display: flex;
     align-items: center;
     gap: var(--espacio-s);
@@ -864,8 +867,11 @@ input[type="checkbox"] {
 }
 
 .condicion {
+    display: flex;
     align-items: flex-start;
-    margin: var(--espacio-m) 0 var(--espacio-l);
+    gap: var(--espacio-s);
+    margin: var(--espacio-l) 0 var(--espacio-m);
+    font-weight: 400;
 }
 
 .obligatorio {
@@ -911,7 +917,6 @@ input[type="checkbox"] {
     font-family: var(--fuente-titulos);
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
 .carrito {
@@ -957,7 +962,6 @@ input[type="checkbox"] {
     display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
 .carrito-subtotal {
@@ -976,7 +980,6 @@ input[type="checkbox"] {
     flex-basis: 100%;
     font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
 
 .carrito-cantidad button {
@@ -1023,10 +1026,10 @@ input[type="checkbox"] {
 
 /* ===== 14. MOVIMIENTO REDUCIDO ===== */
 @media (prefers-reduced-motion: reduce) {
+
     .prenda-fotos,
     .prenda-fotos img,
-    .detalle-principal img,
-    .ampliada-fotos img {
+    .detalle-principal img {
         transition: none;
     }
 
@@ -1042,6 +1045,7 @@ input[type="checkbox"] {
 
 /* ===== 15. ZOOM AL 200 % ===== */
 @media (max-width: 50rem) {
+
     main,
     header,
     footer {
@@ -1049,7 +1053,7 @@ input[type="checkbox"] {
         padding-right: var(--espacio-m);
     }
 
-    header > p {
+    header>p {
         flex-basis: calc(100% + var(--espacio-m) * 2);
         margin: 0 calc(var(--espacio-m) * -1);
     }
@@ -1075,7 +1079,7 @@ input[type="checkbox"] {
         grid-template-columns: 1fr;
     }
 
-    .catalogo-grid > li:first-child {
+    .catalogo-grid>li:first-child {
         grid-column: auto;
         grid-row: auto;
     }

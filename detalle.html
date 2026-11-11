@@ -27,11 +27,9 @@
         <div class="detalle">
             <div class="detalle-galeria">
                 <div class="detalle-principal">
-                    <img class="foto-delante" src="img/the-pants-delante.png"
+                    <img src="img/the-pants-delante.png"
                         alt="Pantalón baggy granate THE PANTS #001 con letras bordadas en relieve en el lateral, vista delantera">
-                    <img class="foto-detras" src="img/the-pants-detras.png" alt="">
                 </div>
-                <img src="img/the-pants-delante.png" alt="">
                 <img src="img/the-pants-detras.png"
                     alt="Pantalón baggy granate THE PANTS #001 con el gráfico REDRED en blanco, vista trasera">
             </div>
@@ -58,7 +56,7 @@
                 </ul>
 
                 <fieldset class="selector-talla">
-                    <legend>Talla (obligatoria)</legend>
+                    <legend>Elige tu talla</legend>
                     <label class="ticket"><input type="radio" name="talla" value="S"> S</label>
                     <label class="ticket"><input type="radio" name="talla" value="M"> M</label>
                     <label class="ticket"><input type="radio" name="talla" value="L"> L</label>
@@ -68,7 +66,7 @@
                 <label class="condicion">
                     <input type="checkbox" name="condicion-preventa">
                     Entiendo que es un producto de preventa y que el envío estimado es del 22 de diciembre al 9 de
-                    enero. (obligatorio)
+                    enero.
                 </label>
 
                 <button class="boton" type="button">Añadir al carrito</button>
@@ -80,7 +78,7 @@
         <section class="informacion" aria-labelledby="titulo-informacion">
             <h2 id="titulo-informacion">Información de la prenda</h2>
 
-            <details id="medidas">
+            <details id="medidas" open>
                 <summary>Medidas</summary>
                 <table>
                     <caption>Medidas de la prenda en centímetros</caption>
