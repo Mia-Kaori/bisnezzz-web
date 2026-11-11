@@ -112,7 +112,7 @@ Toda la documentación está en la carpeta [`docs/`](docs/):
 ## 8. Procedencia de imágenes y recursos
 
 - **Logotipo e imágenes de producto** (`img/`): pertenecen a Bisnezzz y se usan con permiso del negocio. Las prendas son diseños propios de la marca.
-- **Fotografía de la portada** (`img/marketing.png`): fotografía promocional de THE PANTS #001 de Bisnezzz. [COMPLETAR: autoría de la foto]
+- **Fotografía de la portada** (`img/marketing.png`): fotografía promocional de THE PANTS #001 de Bisnezzz. 
 - **Fuentes:** [Anton](https://fonts.google.com/specimen/Anton) e [Inter](https://fonts.google.com/specimen/Inter), de Google Fonts, con licencia SIL Open Font License.
 - **Optimización de imágenes:** [Squoosh](https://squoosh.app/), para reducir el peso de las fotos.
 - **Textos, precios y datos:** propios de Bisnezzz. Los datos de pedidos, carrito y formularios son ficticios.
