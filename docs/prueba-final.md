@@ -43,7 +43,7 @@ Al terminar, se le preguntó si cambiaría algo y respondió que no.
 | Problema detectado | Corrección | Justificación |
 |---|---|---|
 | En la foto ampliada del catálogo, el Tab llevaba el foco detrás de la foto. | El resto de la página se oculta con `visibility: hidden` mientras la foto está abierta. | El foco siempre es visible y el recorrido con el teclado es lógico. |
-| El subrayado de la página actual del menú tenía un contraste de 2,31:1. | Color #A8285F, con 6,14:1. | La página actual se reconoce mejor (RA6) y el indicador se ve con claridad. |
+| El subrayado de la página actual del menú tenía un contraste de 2,31:1. | Color #A8285F, con 6,14:1. | La página actual se reconoce mejor y el indicador se ve con claridad. |
 | Al ampliar al 200 %, dos prendas de Destacados quedaban fuera de la vista y no se alcanzaban con el teclado. | `flex-wrap: wrap` en el rail dentro de la media query de ampliación. | No se pierde contenido al ampliar. |
 | La barra del «perchero» creaba un desplazamiento horizontal en el rail a 1024 y 1440 px. | `padding-inline` en el contenedor `.armario`. | Sin desplazamientos horizontales no deseados. |
 | En el detalle, la talla y la casilla decían «obligatoria» sin serlo. | Textos cambiados a «Elige tu talla» y sin «(obligatorio)». | Las instrucciones coinciden con el comportamiento real de los controles. |
