@@ -9,8 +9,8 @@
 
 | Tarea | Resultado | Qué hizo y dificultades observadas | Cambio realizado después de la prueba |
 |---|---|---|---|
-| 1. Encontrar un elemento del catálogo y consultar sus características | **Autónoma** | Pulsó «Ver catálogo» en el inicio para ver lo que había disponible y llegó al detalle de THE PANTS #001. No dudó. Comentó que le gustaba la tabla de medidas. Quiso ver los detalles de otras prendas: como la foto cambiaba al pasar el ratón, la pulsó y se abrió la foto ampliada. | Ninguno (ver observación 1). |
-| 2. Localizar el carrito e identificar cómo continuar | **Autónoma** | Fue al carrito desde el menú superior. No dudó. | Ninguno. |
+| 1. Encontrar un elemento del catálogo y consultar sus características | **Autónoma** | Pulsó «Ver catálogo» en el inicio para ver lo que había disponible y llegó al detalle de THE PANTS #001. No dudó. Comentó que le gustaba la tabla de medidas. Quiso ver los detalles de otras prendas: como la foto cambiaba al pasar el ratón, la pulsó y se abrió la foto ampliada. | Ninguno. |
+| 2. Localizar el carrito e identificar cómo continuar | **Autónoma** | Fue al carrito desde el menú superior e identificó el botón «Tramitar pedido» como forma de continuar con la compra. No dudó. | Ninguno. |
 | 3. Localizar el formulario y comprender qué información debe introducir | **Autónoma** | Fue al apartado «Ayuda» del pie y pulsó «Cambio de talla». No dudó. | Ninguno. |
 
 Al terminar, se le preguntó si cambiaría algo y respondió que no.
