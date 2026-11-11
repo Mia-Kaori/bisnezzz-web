@@ -585,7 +585,7 @@ footer .aviso p {
     inset: 0;
     z-index: 10;
     padding: var(--espacio-l);
-    background-color: rgb(71 67 41 / 0.97);
+    background-color: #1F1D12;
 }
 
 .ampliada:target {
